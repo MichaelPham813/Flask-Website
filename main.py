@@ -4,7 +4,9 @@ from bmi_calculator import bmi_calculators
 from ISS_data import ISS_dataset
 from ISS_location import get_location
 import json
-app = Flask('app')
+
+
+app = Flask(__name__)
 application = app
 user_lat = None
 user_lon = None
@@ -90,4 +92,5 @@ def user_loc():
   return lat_user,lon_user
 
 
-app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+  app.run(debug=True)
