@@ -5,7 +5,7 @@ from ISS_data import ISS_dataset
 from ISS_location import get_location
 import json
 app = Flask('app')
-
+application = app
 user_lat = None
 user_lon = None
 #Call in weather API and weather function
